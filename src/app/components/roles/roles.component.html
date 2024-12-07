@@ -1,8 +1,14 @@
-<p>roles works!</p>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let item of roleList">{{item.role}}</li>
+        </ul>
+    </div>
+</div>
 
 
 
-
+<!-- 
 <div class="row">
     <div class="col-3">
         <p>{{firstName}}</p>
@@ -58,4 +64,4 @@
             <button class="btn btn-success" (click)="showMessage('Welcome to this site')">Welcome</button>
         </div> 
     </div>
-</div>
+</div> -->
