@@ -4,23 +4,58 @@
 
 
 <div class="row">
-    <div class="col-4">
+    <div class="col-3">
         <p>{{firstName}}</p>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <p>{{secondName}}</p>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <p>{{currentDate}}</p>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <p>{{bool}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{selectedState}}</p>
     </div>
 </div>
 
-<input type="text"/>
-<input type="text" [value]="firstName"/>
-<input type="radio"/>
-<input type="button" [value]="firstName"/>
-<input type="button" value="click me!"/>
-<input type="checkbox"/>
+<div class="row">
+    <div class="col-3">
+        <input type="text"/>
+    </div>
+    <div class="col-3">
+        <input type="text" [value]="firstName"/>
+    </div>
+    <div class="col-3">
+        <input type="radio"/>
+    </div>
+    <div class="col-3">
+        <input type="button" [value]="firstName"/>
+    </div>
+    <div class="col-3">
+        <input type="button" value="click me!"/>
+    </div>
+    <div class="col-3">
+        <input type="checkbox"/>
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName"/> 
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="KL">KL</option>
+            <option value="TN">TN</option>
+            <option value="MH">MH</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <button class="btn btn-success" (click)="showWelcomeMessage()">Welcome</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-success" (click)="showMessage('Welcome to this site')">Welcome</button>
+        </div> 
+    </div>
+</div>
