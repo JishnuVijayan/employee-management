@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { APIResponseModel, Irole } from '../../model/interface/role';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-roles',
   imports: [FormsModule, CommonModule],
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './roles.component.css',
 })
 export class RolesComponent implements OnInit {
+  isLoaded: boolean = true;
   roleList: Irole[] = [];
   http = inject(HttpClient); //instance of the HttpClient service
 
@@ -25,6 +27,7 @@ export class RolesComponent implements OnInit {
       )
       .subscribe((res: APIResponseModel) => {
         this.roleList = res.data;
+        this.isLoaded = false;
       });
   }
 

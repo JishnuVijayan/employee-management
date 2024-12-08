@@ -13,13 +13,17 @@ export class DesignationComponent implements OnInit {
   designationList: Idesignation[] = [];
   masterService = inject(MasterService);
 
+  isLoaded: boolean = true;
+
   ngOnInit(): void {
     this.masterService.getDesignations().subscribe(
       (result: APIResponseModel) => {
         this.designationList = result.data;
+        this.isLoaded = false;
       },
       (error) => {
         alert('API Error');
+        this.isLoaded = false;
       }
     );
   }
