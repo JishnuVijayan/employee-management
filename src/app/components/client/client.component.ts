@@ -41,18 +41,22 @@ export class ClientComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    const isDelete = confirm("Are you sure want to delete?");
-    if(isDelete){
+    const isDelete = confirm('Are you sure want to delete?');
+    if (isDelete) {
       this.clientService
-      .deleteClientById(id)
-      .subscribe((res: APIResponseModel) => {
-        if (res.result) {
-          alert('Client Deleted');
-          this.loadClients();
-        } else {
-          alert(res.message);
-        }
-      });
+        .deleteClientById(id)
+        .subscribe((res: APIResponseModel) => {
+          if (res.result) {
+            alert('Client Deleted');
+            this.loadClients();
+          } else {
+            alert(res.message);
+          }
+        });
     }
+  }
+
+  onEdit(data: Client) {
+    this.clientObj = data;
   }
 }
