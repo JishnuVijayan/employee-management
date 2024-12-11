@@ -1,1 +1,104 @@
-<p>client-project works!</p>
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-success">
+                Client Project List
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Company Name</th>
+                                    <th>Person Name</th>
+                                    <th>Contact No</th>
+                                    <th>City</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-success">
+                New Client Project
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Project Name</label>
+                            <input type="text" required minlength="5" name="projectName" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Start Date</label>
+                            <input type="date" name="startDate" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Expected End Date</label>
+                            <input type="date" name="expectedEndDate" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Contact Name</label>
+                            <input type="text" name="contactName" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Contact Number</label>
+                            <input type="text" name="contactNo" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Email</label>
+                            <input name="Email" class="form-control" />
+                        </div>
+                        <div class="col-6">
+                            <label for="">Total Employee Count</label>
+                            <input type="text" name="totalEmployeeCount" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Project Cost</label>
+                            <input type="text" name="projectCose" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="">Project Description</label>
+                            <textarea type="text" name="projectDescription" class="form-control"></textarea>
+                        </div>
+                        <div class="col-6">
+                            <label for="">Project Funding</label>
+                            <select type="text" name="projectFunding" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="">Lead By</label>
+                            <select type="text" name="leadBy" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 pt-2">
+                            <button class="btn btn-secondary">Reset</button>
+                        </div>
+                        <div class="col-6 pt-2">
+                            <button class="btn btn-success">Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
